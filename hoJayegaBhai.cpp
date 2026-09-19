@@ -1,29 +1,18 @@
 #include <bits/stdc++.h>
-
-using i64 = long long;
-
-void solve() {
-    int n;
-    std::cin >> n;
-    
-    std::vector<int> a(n);
-    for (int i = 0; i < n; i++) {
-        std::cin >> a[i];
-    }
-    
-    std::cout << 1 << " " << n << "\n";
-}
-
+using namespace std;
 int main() {
-    std::ios::sync_with_stdio(false);
-    std::cin.tie(nullptr);
-    
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
     int t;
-    std::cin >> t;
-    
+    cin >> t;
     while (t--) {
-        solve();
+        int n, c = 0;
+        cin >> n;
+        for (int i = 0, x; i < n; i++) {
+            cin >> x;
+            c += x;
+        }
+        cout << (2 * c >= n ? "Bessie" : "Elsie") << '\n';
     }
-    
     return 0;
 }
